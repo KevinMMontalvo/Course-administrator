@@ -1,0 +1,24 @@
+.phone-number-information-container {
+  display: flex;
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-left: 50px;
+}
+
+.phone-number-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-index-text {
+
+  text-align: left;
+  position: relative;
+}
+
+.phone-number-text {
+  text-indent: 5px;
+  position: relative;
+}

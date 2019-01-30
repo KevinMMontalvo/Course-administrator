@@ -1,0 +1,61 @@
+.teacher-column-container {
+  width: auto;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5px;
+  border-bottom: solid 1px;
+  border-color: #E5E8E8;
+}
+
+.teacher-management-table {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  top: 50px;
+  overflow-y: scroll;
+  display: block;
+  margin: auto;
+  left: -400px;
+}
+
+.teacher-information-column {
+  width: 700px;
+  height: auto;
+  position: relative;
+  border-left: solid 1px;
+  border-color: #FFF;
+  transition: 0.5s;
+}
+
+.information-row-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+
+.atribute-container {
+  width: 35%;
+  height: auto;
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+  text-indent: 5%;
+}
+
+.value-container {
+  width: 65%;
+  height: auto;
+  position: relative;
+  display: flex;
+  text-indent: 10px;
+  align-items: center;
+}
+
+.teacher-column-container:hover div.teacher-information-column{
+  background-color: #E5E8E8;
+  cursor: pointer;
+  border-left-color: #E5E8E8;
+}

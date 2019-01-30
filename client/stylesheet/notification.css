@@ -1,0 +1,31 @@
+.notificationContainer {
+  width: 280px;
+  height: 60px;
+  background-color: #333333;
+  margin-right: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notificationIconContainer {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  background-image: url(info-alert.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.notificationTextContainer {
+  height: 36px;
+  width: 64%;
+  padding-left: 20px;
+  font-size: 13px;
+  text-align: justify;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

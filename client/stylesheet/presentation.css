@@ -1,0 +1,20 @@
+.presentation-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+}
+
+.presentation-logo-container {
+  width: 420px;
+  height: 420px;
+  background-image: url(logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin: auto;
+  left: -400px;
+  top: 200px;
+}

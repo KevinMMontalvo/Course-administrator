@@ -1,0 +1,19 @@
+.data-container{
+  width: 100%;
+  background-color: #FFF;
+  height: 100%;
+  position: fixed;
+  padding-left: 400px;
+  z-index: 1;
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  left: -400px;
+  position: relative;
+  justify-content: center;
+  top: 50px;
+  font-size: 300%;
+}

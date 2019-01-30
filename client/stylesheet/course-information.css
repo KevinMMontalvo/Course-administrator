@@ -1,0 +1,94 @@
+.course-column-container {
+  width: auto;
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5px;
+  border-bottom: solid 1px;
+  border-color: #E5E8E8;
+}
+
+.course-management-table {
+  position: relative;
+  width: 920px;
+  height: 650px;
+  top: 50px;
+  overflow-y: scroll;
+  display: block;
+  margin: auto;
+  left: -400px;
+}
+
+.course-information-column {
+  width: 620px;
+  height: auto;
+  position: relative;
+  border-left: solid 1px;
+  border-color: #FFF;
+  transition: 0.5s;
+}
+
+.course-teachers-information-column {
+  width: 300px;
+  height: auto;
+  position: relative;
+  border-left: solid 1px;
+  border-color: #FFF;
+  transition: 0.5s;
+  display: flex;
+}
+
+.information-row-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+
+.atribute-container {
+  width: 35%;
+  height: auto;
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+  text-indent: 5%;
+}
+
+.value-container {
+  width: 65%;
+  height: auto;
+  position: relative;
+  display: flex;
+  text-indent: 10px;
+  align-items: center;
+}
+
+.course-column-container:hover div.course-information-column{
+  background-color: #E5E8E8;
+  cursor: pointer;
+  border-left-color: #E5E8E8;
+}
+
+.course-column-container:hover div.course-teachers-information-column{
+  background-color: #E5E8E8;
+  cursor: pointer;
+  border-left-color: #E5E8E8;
+}
+
+.course-teachers-list-container {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  display: block;
+  overflow-y: scroll;
+}
+
+.add-teacher-by-course-container {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

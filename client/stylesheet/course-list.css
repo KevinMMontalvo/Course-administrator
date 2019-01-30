@@ -1,0 +1,19 @@
+.course-list-container {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.course-list-name {
+  width: 100%;
+  text-indent: 10%;
+  position: relative;
+  font-size: 70%;
+}
+
+.course-list-number {
+  width: auto;
+  position: relative;
+  font-size: 70%;
+}
