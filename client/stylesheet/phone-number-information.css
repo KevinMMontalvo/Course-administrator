@@ -3,7 +3,7 @@
   height: auto;
   width: 100%;
   display: flex;
-  margin-left: 50px;
+  font-size: 0.8em;
 }
 
 .phone-number-row {

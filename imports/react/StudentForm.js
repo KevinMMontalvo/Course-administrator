@@ -160,14 +160,14 @@ export default class StudentForm extends React.Component {
                   <div className="field-container">
                     <div className="field-title">NUMEROS DE TELEFONO</div>
                     <div className="phone-numbers-container">
+                      <div id="phone-input" className="number-input-container">
+                        <input id="phone-ref" ref="phone" className="field-input" type="input"></input>
+                      </div>
                       <div onClick={() => this.addNewPhoneNumber()} className="add-phone-button">+</div>
                       <div className="phone-numbers-list">
                         {this.state.phoneNumbers.map((phoneNumbers) => {
                           return <PhoneNumberInformation phoneNumbers={phoneNumbers}  key={phoneNumbers._id}></PhoneNumberInformation>
                         })}
-                      </div>
-                      <div className="number-input-container">
-                        <input ref="phone" className="field-input" type="input"></input>
                       </div>
                     </div>
                   </div>

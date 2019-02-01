@@ -71,7 +71,7 @@ export default class CoursesByStudentForm extends React.Component {
             <div>
               <div className="form-container">
                 <div className="management-title">AGREGAR CURSOS POR ESTUDIANTE</div>
-                <div className="management-title">NOMBRE: {this.props.selectedStudent.name}</div>
+                <div id="student-name" className="info-title">NOMBRE: {this.props.selectedStudent.name}</div>
                 <div className="form-input">
                   <div className="field-container">
                     <div className="field-title">CURSOS TOMADOS POR EL ESTUDIANTE</div>

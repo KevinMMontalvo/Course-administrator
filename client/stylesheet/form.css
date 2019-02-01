@@ -1,18 +1,21 @@
 .form-container {
-  height: 100%;
+  height: 120vh;
   width: 100%;
   position: absolute;
   animation-name: slide-in-down;
   animation-duration: 1.0s;
   transition: 0.5s;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .form-input {
   width: 100%;
-  height: 70%;
+  height: 120vh;
   position: absolute;
-  top: 100px;
   display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .field-container {
@@ -28,7 +31,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  left: -400px;
 }
 
 .field-input-container {
@@ -36,7 +38,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  left: -400px;
   top: 15px;
 }
 
@@ -72,7 +73,6 @@
   justify-content: center;
   font-size: 110%;
   color: #fff;
-  left: -400px;
   transition: 0.5s;
   background-color: #B53D31;
   text-align: center;
@@ -112,44 +112,50 @@
 }
 
 .phone-numbers-list {
-  width: 300px;
+  width: 20vw;
   height: 90%;
   background-color: #F4F6F6;
   position: relative;
-  left: -480px;
   text-align: center;
   overflow-y: scroll;
 }
 
 .number-input-container {
   position: relative;
-  left: -510px;
-  margin-left: 60px;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
 }
 
 .phone-numbers-container {
-  width: 100%;
+  width: 80vw;
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .add-phone-button {
-  width: 40px;
-  height: 40px;
+  width: 3vw;
+  height: 3vw;
   background-color: #FFF;
   position: relative;
-  left: 100px;
   background-color: #B53D31;
   border-radius: 100%;
   color: #FFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 1.8em;
   transition: 0.5s;
+  margin-left: 1vw;
+  margin-right: 1vw;
   z-index: 5;
+}
+
+#phone-ref {
+  width: 100%;
 }
 
 .add-phone-button:hover {

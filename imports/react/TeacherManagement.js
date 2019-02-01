@@ -47,9 +47,6 @@ export default class TeacherManagement extends React.Component {
                   :
                   <div>
                     <div className="management-title">MAESTROS REGISTRADOS</div>
-                    <div className="column-container">
-                      <div className="t-information-column">INFORMACION DEL PROFESOR</div>
-                    </div>
                     <div className="teacher-management-table">
                       {this.state.teachers.map((teachers) => {
                         return <TeacherInformation teachers={teachers}  key={teachers._id}></TeacherInformation>

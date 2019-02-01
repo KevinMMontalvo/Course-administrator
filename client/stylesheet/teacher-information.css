@@ -1,9 +1,7 @@
 .teacher-column-container {
   width: auto;
-  height: 150px;
+  height: auto;
   position: relative;
-  display: flex;
-  justify-content: center;
   padding-top: 2.5px;
   border-bottom: solid 1px;
   border-color: #E5E8E8;
@@ -11,21 +9,24 @@
 
 .teacher-management-table {
   position: relative;
-  width: 700px;
+  width: 100%;
   height: 500px;
   top: 50px;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: block;
   margin: auto;
-  left: -400px;
 }
 
 .teacher-information-column {
-  width: 700px;
+  width: 100%;
   height: auto;
   position: relative;
   border-left: solid 1px;
   border-color: #FFF;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 0.8em;
   transition: 0.5s;
 }
 
@@ -52,10 +53,4 @@
   display: flex;
   text-indent: 10px;
   align-items: center;
-}
-
-.teacher-column-container:hover div.teacher-information-column{
-  background-color: #E5E8E8;
-  cursor: pointer;
-  border-left-color: #E5E8E8;
 }

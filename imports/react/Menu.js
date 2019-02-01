@@ -9,43 +9,47 @@ export default class Menu extends React.Component {
     }
     studentManagement(){
       this.props.studentManagement();
-      document.getElementById('student').style.backgroundColor = '#2471A3';
-      document.getElementById('course').className = "menu-option";
-      document.getElementById('teacher').className = "menu-option";
-      document.getElementById('search').className = "menu-option";
-      document.getElementById('course').style.backgroundColor = '#1A5276';
-      document.getElementById('teacher').style.backgroundColor = '#1A5276';
-      document.getElementById('search').style.backgroundColor = '#1A5276';
+      let option = document.getElementById('student');
+      let options = document.getElementsByClassName('menu-option');
+      for (var i = 0; i < options.length; i++) {
+        options[i].style.backgroundColor = "#0F141A";
+        options[i].style.textIndent = "3vw";
+      }
+      option.style.backgroundColor = "#212F3C";
+      option.style.textIndent = "5vw";
     }
     courseManagement(){
       this.props.courseManagement();
-      document.getElementById('student').className = "menu-option";
-      document.getElementById('course').style.backgroundColor = '#2471A3';
-      document.getElementById('teacher').className = "menu-option";
-      document.getElementById('search').className = "menu-option";
-      document.getElementById('student').style.backgroundColor = '#1A5276';
-      document.getElementById('teacher').style.backgroundColor = '#1A5276';
-      document.getElementById('search').style.backgroundColor = '#1A5276';
+      let option = document.getElementById('course');
+      let options = document.getElementsByClassName('menu-option');
+      for (var i = 0; i < options.length; i++) {
+        options[i].style.backgroundColor = "#0F141A";
+        options[i].style.textIndent = "3vw";
+      }
+      option.style.backgroundColor = "#212F3C";
+      option.style.textIndent = "5vw";
     }
     teacherManagement(){
       this.props.teacherManagement();
-      document.getElementById('student').className = "menu-option";
-      document.getElementById('course').className = "menu-option";
-      document.getElementById('teacher').style.backgroundColor = '#2471A3';
-      document.getElementById('search').className = "menu-option";
-      document.getElementById('student').style.backgroundColor = '#1A5276';
-      document.getElementById('course').style.backgroundColor = '#1A5276';
-      document.getElementById('search').style.backgroundColor = '#1A5276';
+      let option = document.getElementById('teacher');
+      let options = document.getElementsByClassName('menu-option');
+      for (var i = 0; i < options.length; i++) {
+        options[i].style.backgroundColor = "#0F141A";
+        options[i].style.textIndent = "3vw";
+      }
+      option.style.backgroundColor = "#212F3C";
+      option.style.textIndent = "5vw";
     }
     searchManagement(){
       this.props.searchManagement();
-      document.getElementById('student').className = "menu-option";
-      document.getElementById('course').className = "menu-option";
-      document.getElementById('teacher').className = "menu-option";
-      document.getElementById('search').style.backgroundColor = '#2471A3';
-      document.getElementById('student').style.backgroundColor = '#1A5276';
-      document.getElementById('teacher').style.backgroundColor = '#1A5276';
-      document.getElementById('course').style.backgroundColor = '#1A5276';
+      let option = document.getElementById('search');
+      let options = document.getElementsByClassName('menu-option');
+      for (var i = 0; i < options.length; i++) {
+        options[i].style.backgroundColor = "#0F141A";
+        options[i].style.textIndent = "3vw";
+      }
+      option.style.backgroundColor = "#212F3C";
+      option.style.textIndent = "5vw";
     }
     render() {
         return(

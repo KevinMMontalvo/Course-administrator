@@ -2,19 +2,18 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  animation-name: fade-in;
-  animation-duration: 1.5s;
 }
 
 .presentation-logo-container {
-  width: 420px;
-  height: 420px;
-  background-image: url(logo.png);
+  width: calc(100vw - 20vw);
+  height: 100vh;
+  background-image: url(bg.jfif);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative;
+  position: absolute;
   margin: auto;
-  left: -400px;
-  top: 200px;
+  left: 0vw;
+  top: 0vh;
+  animation: rotateInDownRight 1s;
 }

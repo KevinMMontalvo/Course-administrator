@@ -32,6 +32,9 @@ export default class StudentInformation extends React.Component {
       this.props.setSelectedStudent(this.props.students);
       this.props.showAddCoursesForm();
     }
+    deleteStudent(){
+      this.props.deleteStudent(this.props.students._id);
+    }
     componentWillMount(){
       if(this.props.students.courses[0] != undefined){
         this.setState({
@@ -44,55 +47,65 @@ export default class StudentInformation extends React.Component {
           age: this.getAge(this.props.students.birthDate),
         });
       }
-
     }
+
     render() {
         return(
           <div>
-            <div className="student-column-container">
-              <div className="student-information-column">
-                <div className="information-row-container">
-                  <div className="atribute-container">CEDULA</div>
-                  <div className="value-container">{this.props.students.identificationCard}</div>
-                </div>
-                <div className="information-row-container">
-                  <div className="atribute-container">NOMBRE</div>
-                  <div className="value-container">{this.props.students.name}</div>
-                </div>
-                <div className="information-row-container">
-                  <div className="atribute-container">APELLIDO</div>
-                  <div className="value-container">{this.props.students.lastname}</div>
-                </div>
-                <div className="information-row-container">
-                  <div className="atribute-container">CARRERA</div>
-                  <div className="value-container">{this.props.students.career.name}</div>
-                </div>
-                <div className="information-row-container">
-                  <div className="atribute-container">FECHA N</div>
-                  <div className="value-container"> {this.props.students.birthDate.getDay()}-{this.props.students.birthDate.getMonth()}-{this.props.students.birthDate.getFullYear()}</div>
-                </div>
-                <div className="information-row-container">
-                  <div className="atribute-container">EDAD</div>
-                  <div className="value-container">{this.state.age}</div>
-                </div>
-              </div>
-              <div className="student-phone-numbers-column">
-                {this.props.students.phoneNumbers.map((phoneNumbers) => {
-                  return <PhoneNumberInformation phoneNumbers={phoneNumbers}  key={phoneNumbers._id}></PhoneNumberInformation>
-                })}
-              </div>
-              <div className="student-courses-column">
-                <div className="courses-by-student-container">
-                  <div className="courses-by-student-information">
-                    {this.state.coursesByStudent.map((coursesByStudent) => {
-                      return <CoursesList coursesByStudent={coursesByStudent}  key={coursesByStudent._id}></CoursesList>
-                    })}
+            <div className="">
+              <div className="student-column-container">
+                <p className="info-title">Información personal</p>
+                <div className="student-information-column">
+                  <div className="information-row-container">
+                    <div className="atribute-container">CEDULA</div>
+                    <div className="value-container">{this.props.students.identificationCard}</div>
                   </div>
-                  <div className="add-course-by-student-container">
-                    <div onClick={() => this.showAddCoursesForm()} className="add-course-by-student-button">+</div>
+                  <div className="information-row-container">
+                    <div className="atribute-container">NOMBRE</div>
+                    <div className="value-container">{this.props.students.name}</div>
+                  </div>
+                  <div className="information-row-container">
+                    <div className="atribute-container">APELLIDO</div>
+                    <div className="value-container">{this.props.students.lastname}</div>
+                  </div>
+                  <div className="information-row-container">
+                    <div className="atribute-container">CARRERA</div>
+                    <div className="value-container">{this.props.students.career.name}</div>
+                  </div>
+                  <div className="information-row-container">
+                    <div className="atribute-container">FECHA N</div>
+                    <div className="value-container"> {this.props.students.birthDate.getDay()}-{this.props.students.birthDate.getMonth()}-{this.props.students.birthDate.getFullYear()}</div>
+                  </div>
+                  <div className="information-row-container">
+                    <div className="atribute-container">EDAD</div>
+                    <div className="value-container">{this.state.age}</div>
                   </div>
                 </div>
+                <p className="info-title">Números de contacto</p>
+                <div className="student-phone-numbers-column">
+                  {this.props.students.phoneNumbers.map((phoneNumbers) => {
+                    return <PhoneNumberInformation phoneNumbers={phoneNumbers}  key={phoneNumbers._id}></PhoneNumberInformation>
+                  })}
+                </div>
+                <p className="info-title">Cursos tomados por el estudiante</p>
+                <div className="student-courses-column">
+                  <div className="courses-by-student-container">
+                    <div className="courses-by-student-information">
+                      {this.state.coursesByStudent.map((coursesByStudent) => {
+                        return <CoursesList coursesByStudent={coursesByStudent}  key={coursesByStudent._id}></CoursesList>
+                      })}
+                    </div>
+                    <div className="add-course-by-student-container">
+                      <div onClick={() => this.showAddCoursesForm()} className="add-course-by-student-button">+</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="management-buttons">
+                  <div className="button">MODIFICAR REGISTRO</div>
+                  <div onClick={() => this.deleteStudent()} className="button">ELIMINAR REGISTRO</div>
+                </div>
               </div>
+              <div className="student-separator"></div>
             </div>
           </div>
         );

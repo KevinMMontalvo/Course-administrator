@@ -1,11 +1,11 @@
 .menu-container {
   position: fixed;
-  background-color: #1A5276;
-  width: 400px;
+  background-color: #0F141A;
+  width: 20vw;
   height: 100%;
   z-index: 2;
   animation-name: slide-left-to-right;
-  animation-duration: 2s;
+  animation-duration: 1s;
   display: flex;
   align-items: center;
 }
@@ -18,16 +18,35 @@
 
 .menu-option {
   width: 100%;
-  height: 70px;
+  height: auto;
   color: #FFF;
-  font-size: 150%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.5em;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  text-indent: 3vw;
   transition: 0.5s;
 }
 
 .menu-option:hover {
-  background-color: #2471A3;
+  background-color: #212F3C;
   cursor: pointer;
+}
+
+.info-title {
+  width: 95%;
+  font-size: 1.2em;
+  background-color: #333;
+  color: #FFF;
+  text-indent: 3vw;
+  text-transform: uppercase;
+  position: relative;
+  left: 2vw;
+}
+
+.student-separator {
+  width: 100%;
+  height: 1vh;
+  background-color: #99A3A4;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
 }

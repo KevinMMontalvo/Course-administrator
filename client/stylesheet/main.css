@@ -1,19 +1,22 @@
 .data-container{
-  width: 100%;
+  width: 90vw;
   background-color: #FFF;
   height: 100%;
   position: fixed;
-  padding-left: 400px;
   z-index: 1;
+  padding-left: 20vw;
 }
 
 .title {
   display: flex;
   text-align: center;
-  width: 100%;
-  left: -400px;
+  width: auto;
+  top: 5vh;
   position: relative;
   justify-content: center;
-  top: 50px;
-  font-size: 300%;
+  font-size: 2.6em;
+  z-index: 2;
+  animation: fade-in 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
 }

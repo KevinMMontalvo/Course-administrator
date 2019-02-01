@@ -68,10 +68,6 @@ export default class CourseManagement extends React.Component {
                   !this.state.showAddTeachers?
                     <div>
                       <div className="management-title">CURSOS REGISTRADOS</div>
-                      <div className="column-container">
-                        <div className="c1-information-column">INFORMACION DE CURSO</div>
-                        <div className="c2-information-column">PROFESORES QUE DICTAN EL CURSO</div>
-                      </div>
                       <div className="course-management-table">
                         {this.state.courses.map((courses) => {
                           return <CourseInformation setSelectedCourse={this.setSelectedCourse.bind(this)} showAddTeachersForm={() => this.showAddTeachersForm()} courses={courses}  key={courses._id}></CourseInformation>

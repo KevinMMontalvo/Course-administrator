@@ -32,6 +32,7 @@ export default class TeacherInformation extends React.Component {
         return(
           <div>
             <div className="teacher-column-container">
+              <p className="info-title">Información del profesor</p>
               <div className="teacher-information-column">
                 <div className="information-row-container">
                   <div className="atribute-container">CEDULA</div>
@@ -63,6 +64,7 @@ export default class TeacherInformation extends React.Component {
                 </div>
               </div>
             </div>
+            <div className="student-separator"></div>
           </div>
         );
     }

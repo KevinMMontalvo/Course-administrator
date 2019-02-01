@@ -29,6 +29,7 @@ export default class CourseInformation extends React.Component {
         return(
           <div>
             <div className="course-column-container">
+              <p className="info-title">Información del curso</p>
               <div className="course-information-column">
                 <div className="information-row-container">
                   <div className="atribute-container">NUMERO</div>
@@ -43,6 +44,7 @@ export default class CourseInformation extends React.Component {
                   <div className="value-container">{this.props.courses.department.name}</div>
                 </div>
               </div>
+              <p className="info-title">Profesores que dictan el curso</p>
               <div className="course-teachers-information-column">
                 <div className="course-teachers-list-container">
                   {this.state.teachersByCourse.map((teachersByCourse) => {
@@ -54,6 +56,7 @@ export default class CourseInformation extends React.Component {
                 </div>
               </div>
             </div>
+            <div className="student-separator"></div>
           </div>
         );
     }

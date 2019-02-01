@@ -51,12 +51,30 @@ export default class StudentManagement extends React.Component {
 
       }
     }
+    deleteStudent(id){
+      if(Students.remove(id)){
+        this.showNotification("Estudiante eliminado");
+      }
+    }
     componentWillMount(){
       Tracker.autorun(() => {
         this.setState({
           students: Students.find().fetch(),
         }, () => this.isLoading())
       });
+    }
+    showNotification(message) {
+      ButterToast.raise({
+        content: ({toastId, dismiss}) => (
+          <div className= "notificationContainer">
+            <div className="notificationIconContainer"></div>
+            <div className="notificationTextContainer">
+              {message}
+            </div>
+          </div>
+        ),
+        toastTimeout: 5000
+      })
     }
     render() {
         return(
@@ -69,16 +87,11 @@ export default class StudentManagement extends React.Component {
                     </div>
                   :
                   !this.state.showAddCourses ?
-                    <div>
+                    <div className="table-container">
                       <div className="management-title">ALUMNOS REGISTRADOS</div>
-                      <div className="column-container">
-                        <div className="information-column">INFORMACION PERSONAL</div>
-                        <div className="phone-numbers-column">NUMEROS TELEFONICOS</div>
-                        <div className="courses-column">CURSOS</div>
-                      </div>
                       <div className="student-management-table">
                         {this.state.students.map((students) => {
-                          return <StudentInformation setSelectedStudent={this.setSelectedStudent.bind(this)} showAddCoursesForm={() => this.showAddCoursesForm()} students={students}  key={students._id}></StudentInformation>
+                          return <StudentInformation deleteStudent={this.deleteStudent.bind(this)} setSelectedStudent={this.setSelectedStudent.bind(this)} showAddCoursesForm={() => this.showAddCoursesForm()} students={students}  key={students._id}></StudentInformation>
                         })}
                       </div>
                       <div>
@@ -90,6 +103,9 @@ export default class StudentManagement extends React.Component {
                     <CoursesByStudentForm selectedStudent={this.state.selectedStudent} hideAddCoursesForm = {() => this.hideAddCoursesForm()}></CoursesByStudentForm>
                   </div>
                 }
+              </div>
+              <div>
+                <ButterToast trayPosition="top-right"/>
               </div>
             </div>
         );
