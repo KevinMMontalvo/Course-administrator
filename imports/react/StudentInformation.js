@@ -193,7 +193,7 @@ export default class StudentInformation extends React.Component {
             </div>
             <Modal open={this.state.open} onClose={this.onCloseModal} center>
               <div className="modify-container">
-                <div className="management-title">REGISTRAR ALUMNO</div>
+                <div className="management-title">MODIFICAR REGISTRO</div>
                 <div className="form-input">
                   <div className="field-container">
                     <div className="field-title">CEDULA</div>
