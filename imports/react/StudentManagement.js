@@ -79,11 +79,14 @@ export default class StudentManagement extends React.Component {
     render() {
         return(
             <div>
+              <div>
+                <ButterToast trayPosition="top-right"/>
+              </div>
               <div className="management-container">
                 {
                   this.state.showAddForm ?
                     <div>
-                      <StudentForm hideAddForm = {() => this.hideAddForm()}></StudentForm>
+                      <StudentForm showNotification={this.showNotification.bind(this)} hideAddForm = {() => this.hideAddForm()}></StudentForm>
                     </div>
                   :
                   !this.state.showAddCourses ?
@@ -91,7 +94,7 @@ export default class StudentManagement extends React.Component {
                       <div className="management-title">ALUMNOS REGISTRADOS</div>
                       <div className="student-management-table">
                         {this.state.students.map((students) => {
-                          return <StudentInformation deleteStudent={this.deleteStudent.bind(this)} setSelectedStudent={this.setSelectedStudent.bind(this)} showAddCoursesForm={() => this.showAddCoursesForm()} students={students}  key={students._id}></StudentInformation>
+                          return <StudentInformation showNotification={this.showNotification.bind(this)} deleteStudent={this.deleteStudent.bind(this)} setSelectedStudent={this.setSelectedStudent.bind(this)} showAddCoursesForm={() => this.showAddCoursesForm()} students={students}  key={students._id}></StudentInformation>
                         })}
                       </div>
                       <div>
@@ -103,9 +106,6 @@ export default class StudentManagement extends React.Component {
                     <CoursesByStudentForm selectedStudent={this.state.selectedStudent} hideAddCoursesForm = {() => this.hideAddCoursesForm()}></CoursesByStudentForm>
                   </div>
                 }
-              </div>
-              <div>
-                <ButterToast trayPosition="top-right"/>
               </div>
             </div>
         );

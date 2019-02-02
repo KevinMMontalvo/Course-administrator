@@ -1,0 +1,9 @@
+.modify-container {
+  background-color: #FFF;
+  height: 110vh;
+  padding-right: 10vw;
+}
+
+#modify-number-container {
+  margin-left: -12vw;
+}

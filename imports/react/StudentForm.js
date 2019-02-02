@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-date-picker';
-import ButterToast from 'butter-toast';
 
 import PhoneNumberInformation from '../react/PhoneNumberInformation';
 
@@ -47,19 +46,6 @@ export default class StudentForm extends React.Component {
       }
       return age;
     }
-    showNotification(message) {
-      ButterToast.raise({
-        content: ({toastId, dismiss}) => (
-          <div className= "notificationContainer">
-            <div className="notificationIconContainer"></div>
-            <div className="notificationTextContainer">
-              {message}
-            </div>
-          </div>
-        ),
-        toastTimeout: 5000
-      })
-    }
     clearInputs() {
       this.refs.identificationCard.value = "";
       this.refs.name.value = "";
@@ -95,7 +81,7 @@ export default class StudentForm extends React.Component {
 
       }
       if(Students.insert(student)){
-        this.showNotification("Estudiante registrado");
+        this.props.showNotification("Estudiante registrado");
         this.clearInputs();
       }
     }
@@ -177,9 +163,6 @@ export default class StudentForm extends React.Component {
                 </div>
               </div>
               <div onClick={() => this.goBack()} className="return-button">←</div>
-              <div>
-                <ButterToast trayPosition="top-right"/>
-              </div>
             </div>
         );
     }
