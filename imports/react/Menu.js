@@ -17,6 +17,12 @@ export default class Menu extends React.Component {
       }
       option.style.backgroundColor = "#212F3C";
       option.style.textIndent = "5vw";
+      document.getElementById('menu-container').style.display = "none";
+      document.getElementById('burger-menu').style.backgroundImage = "url(menu.svg)";
+      document.getElementById('burger-menu').style.backgroundSize = "6vh";
+      this.setState({
+        showingResponsiveMenu: false,
+      });
     }
     courseManagement(){
       this.props.courseManagement();
@@ -28,6 +34,12 @@ export default class Menu extends React.Component {
       }
       option.style.backgroundColor = "#212F3C";
       option.style.textIndent = "5vw";
+      document.getElementById('menu-container').style.display = "none";
+      document.getElementById('burger-menu').style.backgroundImage = "url(menu.svg)";
+      document.getElementById('burger-menu').style.backgroundSize = "6vh";
+      this.setState({
+        showingResponsiveMenu: false,
+      });
     }
     teacherManagement(){
       this.props.teacherManagement();
@@ -39,6 +51,12 @@ export default class Menu extends React.Component {
       }
       option.style.backgroundColor = "#212F3C";
       option.style.textIndent = "5vw";
+      document.getElementById('menu-container').style.display = "none";
+      document.getElementById('burger-menu').style.backgroundImage = "url(menu.svg)";
+      document.getElementById('burger-menu').style.backgroundSize = "6vh";
+      this.setState({
+        showingResponsiveMenu: false,
+      });
     }
     searchManagement(){
       this.props.searchManagement();
@@ -50,6 +68,12 @@ export default class Menu extends React.Component {
       }
       option.style.backgroundColor = "#212F3C";
       option.style.textIndent = "5vw";
+      document.getElementById('menu-container').style.display = "none";
+      document.getElementById('burger-menu').style.backgroundImage = "url(menu.svg)";
+      document.getElementById('burger-menu').style.backgroundSize = "6vh";
+      this.setState({
+        showingResponsiveMenu: false,
+      });
     }
     deployResponsiveMenu(){
       if(!this.state.showingResponsiveMenu){
