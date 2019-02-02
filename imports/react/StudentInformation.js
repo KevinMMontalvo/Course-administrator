@@ -114,6 +114,9 @@ export default class StudentInformation extends React.Component {
           break;
         }
       }
+      if(careerId == ""){
+        career = this.props.students.career;
+      }
       let student = {
         identificationCard: identificationCard,
         name: name,
